@@ -10,6 +10,7 @@ The work explores how Azure stores unstructured data using Blob Storage, hosts s
 - Create a storage account
 - Create Blob containers and upload data
 - Deploy a static website using Azure Blob Storage
+- Share files securely using Azure Storage
 - Monitor storage account usage
 - Create an Azure SQL Database
 - Query data using SQL
@@ -32,6 +33,12 @@ The work explores how Azure stores unstructured data using Blob Storage, hosts s
 - Lightweight, cost-effective hosting for HTML/CSS/JS content
 - Public endpoint automatically generated when hosting is enabled
 - Ideal for simple sites, documentation, or static front-ends
+
+### Secure File Sharing with Azure Storage
+- Enables controlled sharing of files using **Stored Access Policies** and **Shared Access Signatures (SAS)**
+- Provides fine-grained access permissions and expiry management
+- Supports lifecycle rules for automatic cleanup of shared data
+- Demonstrates enterprise-grade governance for external data exchange
 
 ### Azure SQL Database
 - Fully managed relational database service
@@ -78,7 +85,19 @@ The live website displayed updated Version 2 content after replacing the origina
 
 ---
 
-### 4. Blob Storage Operations
+### 4. Share Files Securely Using Azure Storage
+- Created a private container and uploaded a sample report file.
+- Configured a **Stored Access Policy** and generated a **SAS URL** for secure partner access.
+- Verified that direct anonymous access was blocked while SAS-based access succeeded.
+- Revoked partner access by deleting the stored access policy, instantly invalidating all SAS tokens.
+- Implemented a **Lifecycle Management Rule** to automatically delete shared files after 30 days.
+
+**Outcome:**  
+Secure file sharing implemented with enterprise-grade access control, instant revocation capability, and automated lifecycle management for shared data.
+
+---
+
+### 5. Blob Storage Operations
 - Created containers and uploaded sample data.
 - Explored blob types and access tiers.
 - Monitored storage account usage and metrics.
@@ -89,6 +108,8 @@ The live website displayed updated Version 2 content after replacing the origina
 - Azure provides different storage services for structured and unstructured data.
 - Blob Storage is optimized for scalable file and object storage.
 - Static website hosting is a simple, cost-effective way to publish web content.
+- Secure file sharing with SAS and access policies enables controlled external collaboration.
+- Lifecycle management ensures data hygiene and compliance.
 - Azure SQL Database offers a fully managed relational platform.
 - Storage and database resources can be monitored for performance and usage.
 - Blob properties and access tiers influence performance and cost.
@@ -99,3 +120,4 @@ The live website displayed updated Version 2 content after replacing the origina
 - Explore Azure File Storage and Disk Storage.
 - Apply security and access control to storage and databases.
 - Integrate storage and databases with compute services.
+- Automate deployments using ARM templates or Bicep.
